@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Merge two in Array </title>
+</head>
+<script>
+let array = [0,1,2,3,4,5];
+let array2 = [6,7,8,9,10];
+let array3 = [];
+for(let i=0; i<array.length; i++){
+    // console.log(array[i]);
+    array3[i] = array[i];
+}
+for(let i=0; i<array2.length;i++){
+     array3[array.length+i]= array2[i]
+}
+console.log(array3);
+
+// Reverse array in default function
+console.log(array.reverse());
+
+// Mergeing array shotcut by default 
+let arr1 = [1,2,3];
+let arr2 = [4,5,6];
+let arr3 = [...arr1, ...arr2];
+console.log(arr3);
+
+
+// let arr1 = [1,2,3];
+// let arr2 = [4,5,6];
+// let arr3 = [arr1 + "," + arr2];
+// console.log(arr3);
+</script>
+
+
+<body>
+    
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Array Traversing</title>
+</head>
+    <script>
+        let array = [10, 12,  1, 1,2,3,67 ,0 ,76, 673] ;
+// taversing of array
+       /* for(let i=0; i<array.length; i++){
+            document.write( ` Array  ${i} is ${array[i]}   <br>`)
+        }  */
+        
+        // accessing of array
+        // let x = 15;
+        // document.write(array[x]);
+        function getElements(){
+            let el = document.getElementById("element").value;
+            // validation 
+            if(el<array.length  && parseInt(el) ){
+
+                alert(array[el]); 
+            }else{
+                alert("Please enter valid data");
+            }
+
+        }
+     </script>
+<body>
+    <input type="text" id="element"/>
+    <button onclick="getElements()">Get Elements</button>
+</body>
+</html>

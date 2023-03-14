@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Array Searching</title>
+</head>
+<script>
+   /* let array = [2,3,4,5,6,7,8,9];
+    let item =7;
+    let index= undefined;
+
+    for(let i=0; i<=array.length-1; i++){
+    //    console.log(array[i]);
+       if(array[i]===item){
+        index = i;
+        break;
+       }
+    }
+    console.log(index); */
+
+
+    // console.log(array.indexOf(item)); //direct searching method in js 
+    // array.splice(5,1);
+    // console.log(array); // direct delete method in js 
+
+    function searchEl(){
+        let array = [2,3,4,5,6,7,8,9];
+    let item =document.getElementById("search").value;
+    let index= undefined;
+
+    for(let i=0; i<=array.length-1; i++){
+    //    console.log(array[i]);
+       if(array[i]==item){
+        index = i;
+        break;
+       }
+    }
+    console.log(index);
+}
+</script>
+<body>
+    
+    <input type="text" placeholder="enter value" id="search">
+    <button onclick="searchEl()">Search Element</button>
+</body>
+</html>

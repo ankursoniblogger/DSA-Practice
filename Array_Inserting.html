@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Array Inserting</title>
+  </head>
+  <script>
+      /*  let array = [2, 3, 5, 6, 7, 8, 9];
+        let newEl = 4;
+        let position = 2;
+        console.log(array);
+          //reverse loop
+       for(let i = array.length-1; i>=0; i--){
+    //    console.log(array[i])
+          if(i>=position){
+           array[i+1] = array[i];
+             if(i==position){
+              array[i]= newEl;
+        }
+    }
+    }
+    console.log(array);  */
+    function insertEl(){
+        let array = [2, 3, 5, 6, 7, 8, 9];
+        let newEl = document.getElementById("newEl").value;
+        newEl = parseInt(newEl);
+        let position = document.getElementById("position").value;
+        console.log(array);
+          //reverse loop
+       for(let i = array.length-1; i>=0; i--){
+    //    console.log(array[i])
+    if(i>=position){
+        array[i+1] = array[i];
+        if(i==position){
+            array[i]= newEl;
+        }
+    }
+    }
+    console.log(array);  
+    }
+
+    //direct js through insert method [splice method]
+    let data =[2, 3, 5, 6, 7, 8, 9];
+    console.warn(data.splice(2,0,4));
+    console.warn(data)
+
+  </script>
+  <body>
+    <input type="text" id="position" placeholder="enter position" />
+    <input type="text" id="newEl" placeholder="enter newEl" />
+
+    <button onclick="insertEl()">Insert</button>
+  </body>
+</html>
