@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+</head>
+<script>
+   
+ function test(x){
+   
+    console.log(x); //head recursion  output == 5,4,3,2,1,0  kuki pahle x print hua phir codition cheak hua call stack mein test 4 store hua , phir console .log x hua jisse 4 print hua , phir condition chek hua phir call stack mein test 3 store hua phir console hua jisse 3 print hua ,,, ase he aage badta jayega 
+     if(x>0){
+         test(x-1)
+        }
+       // console.log(x);   //tail recursion out put  == 0  1,2,3,4,5  esme console tak gya he nai pahle sare conditon cheak hue or sare value call stack mein store hue sabse niche 4,3,2,1,0 ase hua , phir ik ik karke bahar se niklenge toh sabse uper 0 hain wo console hoga phir uske niche 1 hain wo niklega or console hoga ase ase sare value nikal ke console hoge ...
+
+
+ }
+
+let data = 5;
+    test(data);
+
+</script>
+<body>
+    
+</body>
+</html>
