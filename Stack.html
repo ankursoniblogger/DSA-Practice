@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Stack Ds</title>
+</head>
+<script>
+let array = [];
+let currValue = array.length;
+let max = 5;
+
+function push(newValue){
+  
+    if(currValue>=max){
+        alert("stack is full you can not add  " + newValue)
+    }
+    array[currValue] = newValue
+    currValue+= 1;
+}
+
+function pop(){
+    if(currValue>0){
+        currValue-=1;
+        array.length = currValue
+    } else{
+        alert("Stack is already empty")
+    }
+}
+
+push(10);
+push(20);
+push(30);
+push(40);
+pop()
+pop()
+pop()
+
+
+// push(50);
+// push(60);
+// push(70);
+
+
+console.log(array);
+
+</script>
+<body>
+    Stack data structure
+</body>
+</html>

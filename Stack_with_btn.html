@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Stack push and pop with button </title>
+</head>
+<script>
+    let array = []; 
+    let currValue = array.length;
+     let max = 5;
+
+function push(){
+   let newValue  = document.getElementById("newEl").value;
+    if(currValue>=max){
+        alert("stack is full you can not add  " + newValue)
+    }
+    array[currValue] = newValue
+    currValue+= 1;
+}
+
+function pop(){
+    if(currValue>0){
+        currValue-=1;
+        array.length = currValue
+    } else{
+        alert("Stack is already empty")
+    }
+}
+function display(){
+    for(let i=0; i<currValue-1;i++){
+        console.warn(array[i])
+    }
+}
+
+</script>
+<body>
+    <input type="text"  id="newEl" placeholder="Enter stack element">
+    <button onclick="push()">Add element in stack</button>
+    <button onclick="pop()">Remove element in stack </button> 
+    <button onclick="display()">Display the stack data</button>
+</body>
+</html>
