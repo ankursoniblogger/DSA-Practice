@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Stack with class in javascript</title>
+</head>
+<script>
+class Stack{
+
+    item = [];
+    currValue;
+    maxValue;
+
+    constructor(size){
+        this.maxValue = size;
+        this.currValue = this.item.length
+}
+    push(newValue){
+       if(this.currValue>=this.maxValue){
+        alert("stack is full");
+       } else{
+         this.item[this.currValue] = newValue;
+         this.currValue++;
+       }
+    }
+    pop(){
+        if(this.currValue>0){
+           this.currValue--;
+           this.item.length = this.currValue;
+
+        }else{
+            alert("stack is already empty")
+        }
+    }
+    display(){
+        console.log(this.item);
+
+    }
+}
+str1 = new Stack(5)
+str1.push(20)
+str1.push(30)
+str1.pop()
+str1.display()
+</script>
+<body>
+    
+</body>
+</html>

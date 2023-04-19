@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Reverse krna  string ko stack ke help se </title>
+</head>
+<script>
+//   call by refrence 
+ /*   function test(a){
+          a[0] = 300;
+    }
+
+ a = [30]
+ test(a)
+    console.log(a);  output // 300 */
+
+let arr = [];
+let currValue = arr.length;
+
+function push(newValue){
+ arr[currValue] = newValue;
+ currValue += 1;
+
+}
+
+function pop(){
+    lastRemoveItem = arr[currValue-1]
+    currValue -= 1;
+    arr.length = currValue;
+    return lastRemoveItem ;
+}
+
+function reverseStr(item){
+// console.log(item);
+// ab hum string (ankur ) ko push ke help se stack mein convert krte hain for loop ke help se 
+for(let i=0; i<item.length; i++)
+{
+    push(item[i])
+}
+for(let i=0; i<item.length; i++)
+{
+   item[i] = pop() 
+}
+}
+
+let str = "Ankur"
+str = str.split('');  // string convert into an array 
+reverseStr(str);
+
+
+
+
+console.log(str);
+console.log(str.join(''));
+
+
+// console.log("stack" , arr);
+
+</script>
+
+<body>
+    
+</body>
+</html>
