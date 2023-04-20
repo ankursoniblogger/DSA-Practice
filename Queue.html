@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Queue ds in javascript</title>
+</head>
+<script>
+    let Queue = [];
+    let currValue = Queue.length;
+    let maxValue = 5;
+
+function enQueue(newValue){
+    if(currValue>=maxValue){
+        alert("stack is full")
+    } else{
+        Queue[currValue] = newValue;
+        currValue++;
+    }
+}
+function deQueue(){
+if(currValue>0){
+    for(let i=0; i<Queue.length; i++)
+    {
+        Queue[i] = Queue[i+1];  //   jo pahle aaya wo pahle jaye uske jagah pr 2nd wali value aa jaye  ex 10 ke jagah pr 20 wali value aa jaye
+        // console.warn(Queue[i]);
+    }
+    currValue--;
+    Queue.length = currValue;
+
+}else{
+    alert("queue is already empty")
+}
+}
+
+function display(){
+    console.log(Queue)
+}
+
+
+enQueue(10);
+enQueue(20);
+enQueue(30);
+enQueue(40);
+
+display()
+
+</script>
+<body>
+    
+</body>
+</html>
+
+
+
+
+<!-- self made -->
+<!-- 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+</head>
+<script>
+let arr = [];
+let currValue = arr.length;
+let maxValue = 5;
+
+function enQueue(newValue){
+    if(currValue>=maxValue){
+        alert("queue is full")
+    } else{
+        arr[currValue] = newValue;
+        currValue++;
+    }
+}
+
+function deQueue(){
+    if(currValue>0){
+        for(let i=0; i<arr.length; i++){
+        // console.log(arr[i])
+        arr[i] = arr[i+1];
+    }
+    currValue--;
+    arr.length = currValue;
+
+    } else{
+       alert("queue is already empty")
+    }
+   
+}
+
+function display(){
+    console.log(arr);
+}
+ enQueue(1);
+ enQueue(2);
+ enQueue(3);
+ enQueue(4);
+ enQueue(5);
+
+ display()
+
+
+</script>
+<body>
+    
+</body>
+</html> -->
