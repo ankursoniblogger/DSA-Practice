@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>More opration input in queue</title>
+</head>
+
+
+<script>
+    let Queue = [];
+    let currValue = Queue.length;
+    let maxValue = 5;
+
+// function enQueue(newValue){
+//     if(currValue>=maxValue){
+//         alert("stack is full")
+//     } else{
+//         Queue[currValue] = newValue;
+//         currValue++;
+//     }
+// }
+
+
+
+
+//  enqueue with button 
+function enQueueWithBtn(){
+    let newValue = document.getElementById("newEl").value;
+    if(currValue>=maxValue){
+        alert("stack is full")
+    } else{
+        Queue[currValue] = newValue;
+        currValue++;
+    }
+}
+
+
+
+
+function deQueue(){
+if(currValue>0){
+    for(let i=0; i<Queue.length; i++)
+    {
+        Queue[i] = Queue[i+1];  
+        // console.warn(Queue[i]);
+    }
+    currValue--;
+    Queue.length = currValue;
+}else{
+    alert("queue is already empty")
+}
+}
+
+
+
+
+function display(){
+    console.log(Queue)
+}
+
+
+
+
+function front(){
+    if(currValue>0){
+          console.warn(Queue[0]);
+    }else{
+    alert("queue is already empty")
+    }
+}
+
+
+
+
+function rear(){
+    if(currValue>0){
+          console.warn(Queue[currValue-1]);
+    }else{
+    alert("queue is already empty")
+    }
+}
+
+// enQueue(10);
+// enQueue(20);
+// enQueue(30);
+// enQueue(40);
+
+// front()
+// rear();
+// display()
+
+</script>
+
+<body>
+    <h1>front and rear pta karenge and isempoty </h1>
+    <input type="text" placeholder="Enter number" id="newEl">
+    <button onclick="enQueueWithBtn()">Add Element</button>
+    <br><br>
+    <button onclick="deQueue()">delete Element</button>
+    <button onclick="display()">Display Element</button>
+    <button onclick="front()">Front Element</button>
+    <button onclick="rear()">Rear(last) Element</button>
+
+</body>
+</html>
