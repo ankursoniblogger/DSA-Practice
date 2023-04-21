@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Binary search with itrative aproach</title>
+</head>
+<script>
+    let arr = [5,9,13,17];
+    let find = 17;
+    let start = 0;
+    let end = arr.length-1;
+    let position = undefined;
+    while(start<=end){
+        let mid = Math.floor((start+end)/2);
+        // console.log(arr[mid]);
+        if(arr[mid] === find){
+            position = mid;
+            break;
+        } else if(arr[mid]<find){
+            start = mid+1
+        } else{
+            end = mid-1;
+        }
+    }
+    console.log(position)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</script>
+<body>
+    <h1>Binary search with itrative aproach</h1>
+</body>
+</html>
