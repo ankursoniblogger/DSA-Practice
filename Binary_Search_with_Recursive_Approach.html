@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Binary search with recursive Approach </title>
+</head>
+<script>
+let array = [2,4,6,13,34,53];
+let find = 13;
+let start = 0;
+let end = array.length-1;
+let position = undefined;
+
+
+function recursiveBinarySearch(array,start,end){
+    let mid = Math.floor((start+end)/2);
+    if(array[mid] === find){
+        position = mid;
+        return true;
+    }else if(array[mid]<find){
+        recursiveBinarySearch(array,mid+1,end)
+    }else{
+        recursiveBinarySearch(array,start,mid-1)
+    }
+}
+
+recursiveBinarySearch(array,start,end);
+console.warn(position);
+</script>
+<body>
+    <h1>Binary search with recursive Approach </h1>
+</body>
+</html>
