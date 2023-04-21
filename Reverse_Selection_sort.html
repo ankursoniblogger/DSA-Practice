@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Decending order sorting</title>
+  </head>
+  <script>
+    // method 1    reverse for loop
+
+    /*
+    let items = [12, 23, 34, 2, 31, 99, 3];
+
+    function selectionSort(data) {
+      let minId;
+      for (let i = data.length - 1; i >= 0; i--) {
+        // console.log(data[i]);
+        minId = i;
+        for (let j = i - 1; j >= 0; j--) {
+          if (data[j] < data[minId]) {
+            minId = j;
+          }
+        }
+        let temp = data[minId];
+        data[minId] = data[i];
+        data[i] = temp;
+      }
+    }
+    selectionSort(items);
+    console.log(items);      */
+
+
+
+
+    // method 2  only little change  line num 43
+
+    let items = [20,12,23,43,33,3];
+
+function selectionSort(data){
+    let minId;
+    for(let i=0; i < data.length; i++ ){
+        // console.log(data[i])
+        minId = i;
+        for(let j = i+1 ; j<data.length; j++){
+            if(data[j] > data[minId]){
+                minId = j ;
+            }
+        }
+        let temp = data[minId];
+        data[minId] = data[i];
+        data[i] = temp;
+    }  
+
+}
+selectionSort(items)
+console.log(items);
+
+  </script>
+  <body>
+    <h1>Decending order sorting</h1>
+  </body>
+</html>
