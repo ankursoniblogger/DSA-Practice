@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Anagram check krna </title>
+    <script>
+
+
+function checkAnagram(str1, str2){
+    // console.warn(str1,str2);
+    let objstr1 = {};   // yah objuct for loop ke liye hain  jo ke 2nd condition mein aata 
+    // 1. condition === ager dono ke length same nai hain toh return false kr do 
+
+
+    if(str1.length !== str2.length){
+        return false ;
+    }
+
+    // 2.  condition === ik ik character ko match krna for of loop ka use kr rahe hain
+
+
+      for (ch of str1) {
+        // console.log(ch)
+        objstr1[ch] = (objstr1[ch] || 0) +1  // value pta lagte hain esse ke h kitne baar aaya e kitne baar aaya or l kitne baar aaya 
+      }
+      for (ch of str2){
+        // console.log(ch)
+        //   console.warn(objstr1[ch]);
+        if(!objstr1[ch]){    //dono str1 and str2 ke character ko match kr rahe hain 
+            return false ;
+        }
+        objstr1[ch]--   // ager dono match hote hain toh ik ik ko remove krte jao ,jaise l do baar hain to ik l ko remove kr do phir check kro
+      }
+      return true ;   // Ager match ho raha hain return true kr do 
+
+}
+// checkAnagram("hello" , "olleh")
+console.log(checkAnagram("hello", "olleh"));
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
