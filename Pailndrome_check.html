@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Check string are pailndromic or not</title>
+</head>
+<script>
+function pailndromic(data){
+    let start = 0;
+    let end = data.length-1;
+    while(end>=start){
+
+        if(data[start] != data[end]){
+            return false ;
+        } 
+        
+        start++
+        end--;
+    }
+ return true;
+}
+console.log(pailndromic("level"));
+</script>
+<body>
+    
+</body>
+</html>
