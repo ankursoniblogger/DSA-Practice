@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Linked list in js </title>
+</head>
+<script>
+
+class List {
+    constructor(data){
+        this.head = {
+            value: data,
+            next: null
+        }
+        this.tail = this.head 
+    }
+    // create a function to add more node 
+    appendNode(nodeData){
+     let newNode = {
+        value: nodeData,
+        next: null
+     };
+     this.tail.next = newNode;  
+     this.tail = newNode
+
+
+    }
+
+}
+let list = new List(200);
+list.appendNode(300);
+list.appendNode(400);
+
+console.log(list);
+
+</script>
+<body>
+   <h1>Linked list in js</h1> 
+</body>
+</html>
